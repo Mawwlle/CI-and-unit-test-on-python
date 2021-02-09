@@ -18,3 +18,7 @@ jobs:
       - name: Run test
         run: |
           python3 test.py
+      
+      - name: Run programm
+        run: |
+          python3 main.py
