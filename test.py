@@ -26,6 +26,7 @@ class TestArraySum(unittest.TestCase):
 
     def test_sum_array(self):
         self.assertEqual(array_sum([13, 2, 4, 5, 6]), 13 + 2 + 4 + 5 + 6)
+        self.assertEqual(array_sum([13, "test", 32, 4]), 0)
 
 
 if __name__ == '__main__':
