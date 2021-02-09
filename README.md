@@ -7,7 +7,7 @@ Running the programm with the following command:
 
 ```python3 main.py```  
 
-main.py contains the ```class Calculator```, which can do simple ariphmectics operations, and the ```def array_sum```, which finds the sum of the numbers in an array
+main.py contains the ```class Calculator```, which can do simple ariphmectics operations, and the ```def array_sum```, which finds the sum of the numbers in an array. ```class Circle``` contains simple ariphmetic operation with circle.
 
 ## Unit Testing with Python
 
