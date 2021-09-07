@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 
 @pytest.fixture
 def browser():
-    driver = Chrome('/Users/maksimdunaev/Downloads/chromedriver')
+    driver = Chrome('chromedriver')
     driver.implicitly_wait(10)
     yield driver
     driver.quit()
