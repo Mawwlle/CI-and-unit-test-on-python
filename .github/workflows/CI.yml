@@ -18,6 +18,11 @@ jobs:
       - name: Run test
         run: |
           python3 test.py
+
+      - name: Run pytest
+        run: |
+          cd pytest && pip install -r requirements.txt && cd tests
+          python3 test_math.py -m pytest
       
       - name: Run programm
         run: |

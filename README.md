@@ -17,5 +17,14 @@ Running the unit tests with the following command:
 
 test.py imports the generated calculator and unittest module needed to set up and run tests, as well as the array_sum function.
 
+## Parametrized tests show in pytest dir
+To run the tests, first start the web server, this can be done through the IDE or using the command line 
 
+```flask run```   [docs](https://flask.palletsprojects.com/en/2.0.x/quickstart/#routing)
 
+Next, install deps and run the tests
+
+```
+pip -r install requirements.txt
+python3 pytest/tests/test_math.py -m pytest
+```
