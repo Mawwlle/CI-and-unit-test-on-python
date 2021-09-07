@@ -20,16 +20,7 @@ jobs:
           python3 test.py
 
       - name: Run pytest
-        run: |
-        (
-        set -x;
-        cd pytest/web_page/;
-        pip install -r requirements.txt;
-        flask run &;
-        cd ..;
-        cd tests;
-        python3 -m pytest;
-        )
+        run: (set -x; cd pytest/web_page/; pip install -r requirements.txt;flask run &; cd ../tests;python3 -m pytest;)
 
 
       
