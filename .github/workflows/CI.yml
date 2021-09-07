@@ -27,11 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: ls
-      - run: cd pytest
-      - run: ls
-      - run: pip install -r requirements.txt
-      - run: cd web-page
-      - run: flask run &
-      - run: cd ../tests
-      - run: python3 -m pytest
+      - run: pip install -r pytest/requirements.txt
+      - run: pytest/web-page flask run &
+      - run: ../tests python3 -m pytest
