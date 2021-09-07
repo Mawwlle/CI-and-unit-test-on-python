@@ -28,8 +28,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: ls
-      - run: cd pytest/web-page
+      - run: cd pytest
       - run: pip install -r requirements.txt
+      - run: cd web-page
       - run: flask run &
       - run: cd ../tests
       - run: python3 -m pytest
