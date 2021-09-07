@@ -26,7 +26,9 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
     steps:
-      - run: cd pytest/web-page/
+      - uses: actions/checkout@v2
+      - run: ls
+      - run: cd pytest/web-page
       - run: pip install -r requirements.txt
       - run: flask run &
       - run: cd ../tests
