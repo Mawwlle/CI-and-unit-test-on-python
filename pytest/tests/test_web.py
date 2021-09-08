@@ -20,12 +20,12 @@ def browser():
 @pytest.mark.parametrize(
     "url, phrase, search_id_first, search_id_second, search_res_count",
     [
-        # Yandex
-        ('https://yandex.ru/', 'abobuis', 'text', 'uniq16295382021401', 'content__left'),
 # Please comment on one of the tests, as CI does not yet support all tests
-        # # DuckDuckGo
-        # ('https://duckduckgo.com/', 'hello', 'search_form_input_homepage', 'search_form_input',
-        #  'results'),
+        # DuckDuckGo
+        ('https://duckduckgo.com/', 'hello', 'search_form_input_homepage', 'search_form_input',
+         'results'),
+        # Yandex
+        # ('https://yandex.ru/', 'abobuis', 'text', 'uniq16295382021401', 'content__left'),
         # # Test my own webpage
         # ('http://127.0.0.1:5000/search', 'test_browser', 'text', 'uniq16295382021401', 'content__left')
     ]
