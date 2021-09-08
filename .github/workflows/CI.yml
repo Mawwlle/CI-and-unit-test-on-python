@@ -42,7 +42,7 @@ jobs:
       - run: wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
       - run: unzip testng-6.8.7.jar.zip
       - run: ls
-      - run: xvfb-run java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone-3.13.0.jar
+      - run: xvfb-run java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone-3.13.0.jar &
       - run: pip install -r pytest/requirements.txt
       - run: pytest/web-page flask run &
       - run: pytest
