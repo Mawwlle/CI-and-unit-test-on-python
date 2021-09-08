@@ -2,11 +2,17 @@ import pytest
 
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+
 
 
 @pytest.fixture
 def browser():
-    driver = Chrome('chromedriver')
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    driver = Chrome('chromedriver',chrome_options=chrome_options)
     driver.implicitly_wait(10)
     yield driver
     driver.quit()
