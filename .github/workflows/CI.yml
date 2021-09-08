@@ -41,7 +41,8 @@ jobs:
       - run: wget https://selenium-release.storage.googleapis.com/3.13/selenium-server-standalone-3.13.0.jar
       - run: wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
       - run: unzip testng-6.8.7.jar.zip
-      - run: xvfb-run java -Dwebdriver.chrome.driver=/usr/bin/chromedriver -jar selenium-server-standalone.jar
+      - run: ls
+      - run: xvfb-run java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone.jar
       - run: pip install -r pytest/requirements.txt
       - run: pytest/web-page flask run &
       - run: pytest
