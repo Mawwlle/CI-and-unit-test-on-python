@@ -32,7 +32,16 @@ jobs:
       - run: sudo apt-get install libxss1 libappindicator1 libindicator7
       - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
       - run: sudo apt install ./google-chrome*.deb
+      - run: sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4
+      - run: sudo apt-get install default-jdk
+      - run: sudo apt-get -y install google-chrome-stable
+      - run: wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+      - run: unzip chromedriver_linux64.zip
+      - run: ls
       - run: wget https://selenium-release.storage.googleapis.com/3.13/selenium-server-standalone-3.13.0.jar
+      - run: wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
+      - run: unzip testng-6.8.7.jar.zip
+      - run: xvfb-run java -Dwebdriver.chrome.driver=/usr/bin/chromedriver -jar selenium-server-standalone.jar
       - run: pip install -r pytest/requirements.txt
       - run: pytest/web-page flask run &
       - run: pytest
